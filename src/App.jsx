@@ -1,5 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
+import React from "react";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Pagina404 from "./pages/Pagina404";
+
+function App() {
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Pagina404 />} />
+      </Routes>
+    </HashRouter>
+  );
+}
+
+export default App;
+
 
 const defaultCategories = [
   "Salary",
